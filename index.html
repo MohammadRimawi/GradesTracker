@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"
+        integrity="sha512-hZf9Qhp3rlDJBvAKvmiG+goaaKRZA6LKUO35oK6EsM0/kjPK32Yw7URqrq3Q+Nvbbt8Usss+IekL7CRn83dYmw=="
+        crossorigin="anonymous"></script>
+    <link id='GoogleFontsLink' href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'
+        type='text/css'>
+    <script>
+        WebFontConfig = {
+            google: {
+                families: ["Open Sans", ]
+            },
+            active: function () {
+                DrawTheChart(ChartData, ChartOptions, "chart-01", "line")
+            }
+        };
+    </script>
+    <script asyn src="js/webfont.js">
+    </script>
+    <script src="js/Chart.min.js"></script>
+    <script>
+        function DrawTheChart(ChartData, ChartOptions, ChartId, ChartType) {
+            eval('var myLine = new Chart(document.getElementById(ChartId).getContext("2d"),{type:"' + ChartType +
+                '",data:ChartData,options:ChartOptions});document.getElementById(ChartId).getContext("2d").stroke();'
+                )
+        }
+    </script>
+</head>
+
+<body>
+    <canvas id="chart-01" width="815" height="500"
+        style="background-color:rgba(255,255,255,1.00);border-radius:0px;width:815px;height:500px;padding-left:0px;padding-right:0px;padding-top:0px;padding-bottom:0px"></canvas>
+    <script>
+        function MoreChartOptions() {}
+        var ChartData = {
+            labels: ["January", "February", "March", "April", "May", "June", "July", ],
+            datasets: [{
+                    data: [100, 80, 90, 81, 56, 55, 40, ],
+                    backgroundColor: 'rgba(52,152,219,0)',
+                    borderColor: 'rgba(72,0,255,0.98)',
+                    pointBackgroundColor: '#4800ff',
+                    pointBorderColor: '#fff',
+                    label: "2013"
+                },
+
+                {
+                    data: [80, 80, 80, 89, 96, 87, 100, ],
+                    backgroundColor: 'rgba(46,204,112,0)',
+                    borderColor: '#ff006f',
+                    pointBackgroundColor: '#ff006f',
+                    pointBorderColor: '#fff',
+                    label: "2014"
+                },
+
+            ]
+        };
+        ChartOptions = {
+            responsive: false,
+            layout: {
+                padding: {
+                    top: 12,
+                    left: 12,
+                    bottom: 12,
+                },
+            },
+            scales: {
+                xAxes: [{
+                    gridLines: {
+                        borderDash: [],
+                    },
+                    scaleLabel: {
+                        display: true,
+                        labelString: 'Semesters',
+                        fontColor: '#666666',
+                        fontSize: 16,
+                    },
+
+                }],
+
+                yAxes: [{
+                    gridLines: {
+                        borderDash: [],
+                    },
+                    scaleLabel: {
+                        display: true,
+                        labelString: 'Grade',
+                        fontColor: '#666666',
+                        fontSize: 16,
+                    },
+
+                }],
+            },
+            plugins: {
+                datalabels: {
+                    display: false
+                },
+            },
+            legend: {
+                labels: {
+                    usePointStyle: true,
+
+                    generateLabels: function (chart) {
+                        return chart.data.datasets.map(function (dataset, i) {
+                            return {
+                                text: dataset.label,
+                                lineCap: dataset.borderCapStyle,
+                                lineDash: [],
+                                lineDashOffset: 0,
+                                lineJoin: dataset.borderJoinStyle,
+                                pointStyle: 'rectRounded',
+                                fillStyle: dataset.backgroundColor,
+                                strokeStyle: dataset.borderColor,
+                                lineWidth: dataset.pointBorderWidth,
+                                lineDash: dataset.borderDash,
+                            }
+                        })
+                    },
+
+                },
+            },
+            elements: {
+                arc: {},
+                point: {
+                    radius: 4,
+                    borderWidth: 4,
+                },
+                line: {
+                    tension: 0.25,
+                    fill: false,
+                    borderWidth: 2,
+                },
+                rectangle: {},
+            },
+            tooltips: {
+                displayColors: false,
+            },
+            hover: {
+                mode: 'nearest',
+                animationDuration: 400,
+            },
+        };
+        DrawTheChart(ChartData, ChartOptions, "chart-01", "line");
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+Course Number	Course Title	Number of hours	Course Status	Prerequisite	Course Average	Course Result
+11206	Object Oriented Programming	3	Registered	Prerequisite: Structured Programming	80	Pass
+11212	Data Structures and Introduction to Algorithms	3	Registered	"Prerequisite: Discrete Mathematics (1),Prerequisite: Object Oriented Programming"	82	Pass
+11253	Object Oriented Programming Lab	1	Registered	Concurrent: Object Oriented Programming	97	Pass
+11313	Algorithms Design and Analysis	3	Registered	Prerequisite: Data Structures and Introduction to Algorithms	90	Pass
+11316	Theory of Computation	3	Registered	"Prerequisite: Discrete Math (2),Prerequisite: Object Oriented Programming"		Pass
+11323	Database Systems	3	Registered	Prerequisite: Data Structures and Introduction to Algorithms		Pass
+11335	Operating Systems	3	Registered	"Prerequisite: Data Structures and Introduction to Algorithms,Prerequisite: Computer Organization and Assembly Language"		Pass
+11354	Database Systems Lab	1	Registered	Concurrent: Database Systems	93	Pass
+11355	Operating Systems Lab	1	Registered	Concurrent: Operating Systems	96	Pass
+11391	Practical Training	3		Finish 90 Hours		
+11425	Software Engineering	3	Registered	Prerequisite: Database Systems	84	Pass
+11428	Artificial Intelligence	3	Registered	Prerequisite: Data Structures and Introduction to Algorithms		Not Confirmed
+11435	Data Communications & Computer Networks	3	Registered	Prerequisite: Data Structures and Introduction to Algorithms		Pass
+11449	Computer and Society	1	Registered	Finish 70 Hours		Not Confirmed
+11464	Information Systems Security	3	Registered	Prerequisite: Data Communications & Computer Networks		Not Confirmed
+11493	Graduation Project 1	1		Finish 90 Hours		
+11494	Graduation Project 2	2		Prerequisite: Graduation Project 1		
+12242	Webpage Design and Internet programming LAB	1	Registered	Concurrent: Webpage Design and Internet programming	99	Pass
+12243	Webpage Design and Internet programming	3	Registered	Prerequisite: Object Oriented Programming	92	Pass
+12343	Visual Programming	3	Registered	Prerequisite: Object Oriented Programming	96	Pass
+20135	Discrete Math (2)	3	Registered	Prerequisite: Discrete Mathematics (1)	84	Pass
+20141	Physics (1)	3	Registered		76	Pass
+20142	Physics (2)	3		Prerequisite: Physics (1)		
+20147	Physics Lab	0	Registered	Concurrent: Physics (1)		Pass
+20333	Numerical Analysis	3	Registered	Prerequisite: Calculus (2)		Not Confirmed
+20336	Principles of Probability	3	Registered	"Prerequisite: Calculus (2),Prerequisite: Statistical Methods"		Pass
+22241	Digital Logic Design	3	Registered		84	Pass
+22342	Computer Organization and Assembly Language	3	Registered	Prerequisite: Digital Logic Design	71	Pass
+22541	Computer Architecture	3		Prerequisite: Computer Organization and Assembly Language		

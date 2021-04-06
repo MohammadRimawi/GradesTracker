@@ -1,0 +1,102 @@
+Compulsory University Requirements ( CHs 12)
+Course Number	Course Title	Number of hours	Course Status	Prerequisite	Course Average	Course Result
+11100	Computer Skills (Remedial)	0	Exempted			Pass
+31019	Arabic Language(Remedial)	0	Exempted			Pass
+31029	English Language (Remedial)	0	Exempted			Pass
+31111	Arabic Language	3	Registered	Prerequisite: Arabic Language(Remedial)	84	Pass
+31121	English Language	3	Registered	Prerequisite: English Language (Remedial)	88	Pass
+31151	National Education	3	Registered		78	Pass
+31153	Introduction to Society, Technology and Environment Protection	0	Registered			Pass
+31251	Military Science	3				
+Hours remaining 3
+
+Compulsory School Requirements ( CHs 25)
+Course Number	Course Title	Number of hours	Course Status	Prerequisite	Course Average	Course Result
+11102	Introduction to Computer Science	3	Registered		89	Pass
+11103	Structured Programming	3	Registered	Prerequisite: Introduction to Computer Science	92	Pass
+11151	Structured Programming Lab	1	Registered	Concurrent: Structured Programming	100	Pass
+20132	Calculus (1)	3	Registered		69	Pass
+20133	Calculus (2)	3	Registered	Prerequisite: Calculus (1)	58	Pass
+20134	Discrete Mathematics (1)	3	Registered		59	Pass
+20200	Technical Writing and Communication Skills	3	Registered	Prerequisite: Arabic Language,Prerequisite: English Language		Not Confirmed
+20233	Statistical Methods	3	Registered		60	Pass
+20234	Linear Algebra	3	Withdrawal	Prerequisite: Calculus (2)		Withdrawal
+Hours remaining 6
+
+Compulsory Program Requirements ( CHs 71)
+Course Number	Course Title	Number of hours	Course Status	Prerequisite	Course Average	Course Result
+11206	Object Oriented Programming	3	Registered	Prerequisite: Structured Programming	80	Pass
+11212	Data Structures and Introduction to Algorithms	3	Registered	Prerequisite: Discrete Mathematics (1),Prerequisite: Object Oriented Programming	82	Pass
+11253	Object Oriented Programming Lab	1	Registered	Concurrent: Object Oriented Programming	97	Pass
+11313	Algorithms Design and Analysis	3	Registered	Prerequisite: Data Structures and Introduction to Algorithms	90	Pass
+11316	Theory of Computation	3	Registered	Prerequisite: Discrete Math (2),Prerequisite: Object Oriented Programming		Pass
+11323	Database Systems	3	Registered	Prerequisite: Data Structures and Introduction to Algorithms		Pass
+11335	Operating Systems	3	Registered	Prerequisite: Data Structures and Introduction to Algorithms,Prerequisite: Computer Organization and Assembly Language	80	Pass
+11354	Database Systems Lab	1	Registered	Concurrent: Database Systems	93	Pass
+11355	Operating Systems Lab	1	Registered	Concurrent: Operating Systems	96	Pass
+11391	Practical Training	3		Finish 90 Hours		
+11425	Software Engineering	3	Registered	Prerequisite: Database Systems	84	Pass
+11428	Artificial Intelligence	3	Registered	Prerequisite: Data Structures and Introduction to Algorithms		Not Confirmed
+11435	Data Communications & Computer Networks	3	Registered	Prerequisite: Data Structures and Introduction to Algorithms	78	Pass
+11449	Computer and Society	1	Registered	Finish 70 Hours		Not Confirmed
+11464	Information Systems Security	3	Registered	Prerequisite: Data Communications & Computer Networks		Not Confirmed
+11493	Graduation Project 1	1		Finish 90 Hours		
+11494	Graduation Project 2	2		Prerequisite: Graduation Project 1		
+12242	Webpage Design and Internet programming LAB	1	Registered	Concurrent: Webpage Design and Internet programming	99	Pass
+12243	Webpage Design and Internet programming	3	Registered	Prerequisite: Object Oriented Programming	92	Pass
+12343	Visual Programming	3	Registered	Prerequisite: Object Oriented Programming	96	Pass
+20135	Discrete Math (2)	3	Registered	Prerequisite: Discrete Mathematics (1)	84	Pass
+20141	Physics (1)	3	Registered		76	Pass
+20142	Physics (2)	3		Prerequisite: Physics (1)		
+20147	Physics Lab	0	Registered	Concurrent: Physics (1)		Pass
+20333	Numerical Analysis	3	Registered	Prerequisite: Calculus (2)		Not Confirmed
+20336	Principles of Probability	3	Registered	Prerequisite: Calculus (2),Prerequisite: Statistical Methods		Pass
+22241	Digital Logic Design	3	Registered		84	Pass
+22342	Computer Organization and Assembly Language	3	Registered	Prerequisite: Digital Logic Design	71	Pass
+22541	Computer Architecture	3		Prerequisite: Computer Organization and Assembly Language		
+Hours remaining 22
+
+Elective Program Requirements ( CHs 9)
+Course Number	Course Title	Number of hours	Course Status	Prerequisite	Course Average	Course Result
+11343	Special Topic in Computer Science (1)	3				
+11344	Advanced Topics in Internet Programming	3		Prerequisite: Webpage Design and Internet programming		
+11347	Electronic Business	3		Prerequisite: Webpage Design and Internet programming		
+11417	Compiler Design and Programming Languages	3		Prerequisite: Theory of Computation		
+11436	Distributed Systems	3		Prerequisite: Data Communications & Computer Networks		
+11446	Special Topic in Computer Science (2)	3				
+11447	Wireless Networks and Applications	3		Prerequisite: Data Communications & Computer Networks		
+12273	Computer Graphics	3		Prerequisite: Data Structures and Introduction to Algorithms		
+12324	Human Computer Interaction	3		Prerequisite: Object Oriented Programming		
+12348	Multimedia Systems	3		Prerequisite: Object Oriented Programming		
+12446	Digital Image Processing	3		Prerequisite: Data Structures and Introduction to Algorithms		
+13324	System Analysis And Design	3		Prerequisite: Software Engineering		
+13334	Mobile Application Development	3		Prerequisite: Object Oriented Programming		
+13432	Software Project Management	3		Prerequisite: System Analysis And Design		
+20332	Operations Research	3		Prerequisite: Calculus (2)		
+Hours remaining 9
+
+Elective University Requirements (General) ( CHs 6)
+Course Number	Course Title	Number of hours	Course Status	Prerequisite	Course Average	Course Result
+20251	History of Science	3				
+20252	Arab Islamic Scientific Heritage	3				
+31100	Sports and Health	3				
+31152	Arabic Islamic Civilization	3				
+31161	Introduction to Library Science	3				
+31211	Arabic Literature	3		Prerequisite: Arabic Language		
+31252	Governance and Development	3				
+31261	Introduction to Politics and Economic Science	3				
+31262	Introduction to Educational Science	3				
+31271	Environmental Science	3				
+31351	Contemporary Issues in the Arab World	3				
+31352	Jerusalem : History and Facts	3				
+31361	Introduction to Philosophy	3				
+31371	Health Education	3				
+Hours remaining 6
+
+Elective University Requirements (Scientific, Practical) ( CHs 9)
+Course Number	Course Title	Number of hours	Course Status	Prerequisite	Course Average	Course Result
+31130	Foreign languages	3				
+31255	Entrepreneurship for Business	3		Finish 60 Hours		
+31311	Scientific Research Methods	3	Registered			Not Confirmed
+31372	Business Skills	3		Finish 60 Hours		
+Hours remaining 9

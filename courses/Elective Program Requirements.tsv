@@ -1,0 +1,16 @@
+Course Number	Course Title	Number of hours	Course Status	Prerequisite	Course Average	Course Result
+11343	Special Topic in Computer Science (1)	3				
+11344	Advanced Topics in Internet Programming	3		Prerequisite: Webpage Design and Internet programming		
+11347	Electronic Business	3		Prerequisite: Webpage Design and Internet programming		
+11417	Compiler Design and Programming Languages	3		Prerequisite: Theory of Computation		
+11436	Distributed Systems	3		Prerequisite: Data Communications & Computer Networks		
+11446	Special Topic in Computer Science (2)	3				
+11447	Wireless Networks and Applications	3		Prerequisite: Data Communications & Computer Networks		
+12273	Computer Graphics	3		Prerequisite: Data Structures and Introduction to Algorithms		
+12324	Human Computer Interaction	3		Prerequisite: Object Oriented Programming		
+12348	Multimedia Systems	3		Prerequisite: Object Oriented Programming		
+12446	Digital Image Processing	3		Prerequisite: Data Structures and Introduction to Algorithms		
+13324	System Analysis And Design	3		Prerequisite: Software Engineering		
+13334	Mobile Application Development	3		Prerequisite: Object Oriented Programming		
+13432	Software Project Management	3		Prerequisite: System Analysis And Design		
+20332	Operations Research	3		Prerequisite: Calculus (2)

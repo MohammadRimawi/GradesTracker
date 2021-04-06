@@ -1,0 +1,141 @@
+{% extends 'base.html' %}
+
+{% block button %}
+{% for s in Semester.semesters %}
+
+<div class="accordion-item">
+    <div class="accordion-header position-relative" id="{{"Y"~s.year~"S"~s.semester}}1">
+    {% if s.number_of_pass_fail_courses > 0%}
+        <span class="position-absolute start-100 translate-middle badge rounded-pill bg-danger">{{s.number_of_pass_fail_courses}} <span
+                class="visually-hidden">unread messages</span></span>
+    {% endif %}
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#{{"Y"~s.year~"S"~s.semester}}" aria-expanded="false" aria-controls="{{"Y"~s.year~"S"~s.semester}}1">
+
+            <div class="row w-100">
+               
+                <div class="col-2 m-auto">{{"Y"~s.year~"S"~s.semester}}</div>
+                <div class="col-2 m-auto">{{s.semester_average}} </div>
+                <div class="col-2 m-auto">{{s.cumulative_average}}</div>
+                <div class="col-2 m-auto">{{s.performance}}</div>
+                <div class="col-2 m-auto">{{s.semester_hours}}</div>
+                <div class="col-2 m-auto">{{s.number_of_course}}</div>
+               
+            </div>
+        </button>
+    </div>
+    <div id="{{"Y"~s.year~"S"~s.semester}}" class="accordion-collapse collapse" aria-labelledby="{{"Y"~s.year~"S"~s.semester}}" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+
+            <table class="table table-striped {% if dark_mode %}table-dark{% endif %}">
+
+                <thead class="">
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Credit</th>
+                        <th scope="col">First</th>
+                        <th scope="col">Second</th>
+                        <th scope="col">Third</th>
+                        <th scope="col">Final</th>
+                        <th scope="col">Total</th>
+                        <th scope="col">Result</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Pass/Fail</th>
+                    </tr>
+                </thead>
+                <tbody class="position-relative">
+                   {% for c in s.courses %}
+                    <tr class="position-relative {% if c.is_pass_fail %}table-warning{% endif %} {% if c.status.lower()=="withdrawal" %}table-danger{% endif %}">
+                        <th scope="col">{{c.id}}</th>
+                        <th scope="col">{{c.name_en}}</th>
+                        <th scope="col">{{c.credit}}</th>
+                        <th scope="col">{{c.first_mark}}</th>
+                        <th scope="col">{{c.second_mark}}</th>
+                        <th scope="col">{{c.third_mark}}</th>
+                        <th scope="col">{{c.final_mark}}</th>
+                        <th scope="col">{{c.get_mark()}}</th>
+                        <th scope="col">{{c.result}}</th>
+                        <th scope="col">{{c.status}}</th>
+                        <th scope="col">
+
+                        <form id={{c.id}} action="{{ url_for('change_pass_fail') }}" method="post">
+                            <div class="form-check form-switch">
+                                <input class="form-check-input "   {% if c.status.lower()=="withdrawal" %}disabled{% endif %} type="checkbox" {% if c.is_pass_fail %} checked {% endif %}  id="flexSwitchCheckDefault" onchange="document.getElementById('{{c.id}}').submit()" >
+                              
+                                <input type="hidden" name ="id" value="{{c.id}}">
+                            </div>
+                        </form>
+                        </th>
+                    </tr>
+                   {% endfor %}
+                </tbody>
+
+            </table>
+
+            <div class="row">
+
+                <div class="col-3">
+                    without pass fail
+                    <br><br>
+                    <div>Semester average : {{s.semester_average}}</div>
+                    <div>Semester sum  : {{s.semester_sum-s.semester_pass_fail_sum}}</div>
+                    <div>Semester hours : {{s.semester_hours-s.semester_pass_fail_hours}}</div>
+                    <div>Semester number of courses : {{s.number_of_course-s.number_of_pass_fail_courses}}</div>
+                    <br>
+                    <div>Cumulative average : {{s.cumulative_average}}</div>
+                    <div>Cumulative sum  : {{s.cumulative_sum-s.cumulative_pass_fail_sum}}</div>
+                    <div>Cumulative hours : {{s.cumulative_hours-s.cumulative_pass_fail_hours}}</div>
+                </div>
+
+                
+                <div class="col-3">
+                    with pass fail
+                    <br><br>
+                    <div>Semester average : {{'%0.1f'| format((s.semester_sum)/(s.semester_hours))}}</div>
+                    <div>Semester sum  : {{s.semester_sum}}</div>
+                    <div>Semester hours : {{s.semester_hours}}</div>
+                    <div>Semester number of courses : {{s.number_of_course}}</div>
+
+                    <br>
+                    <div>Cumulative average : {{'%0.1f'| format(s.cumulative_sum/s.cumulative_hours)}}</div>
+                    <div>Cumulative sum  : {{s.cumulative_sum}}</div>
+                    <div>Cumulative hours : {{s.cumulative_hours}}</div>
+                </div>
+
+                
+                <div class="col-3">
+                    difference
+                    <br><br>
+                    <div>Average difference : {{'%0.1f'| format((s.semester_average)-((s.semester_sum)/(s.semester_hours)))}}</div>
+                    <div>Semester sum  : {{s.semester_sum-s.semester_sum-s.semester_pass_fail_sum}}</div>
+                    <div>Semester hours : {{s.semester_hours-s.semester_pass_fail_hours-s.semester_hours}}</div>
+                    <div>Semester number of courses : {{s.number_of_course- s.number_of_course-s.number_of_pass_fail_courses}}</div>
+
+                    <br>
+                    <div>Cumulative average : {{'%0.1f'| format(s.cumulative_average-(s.cumulative_sum/s.cumulative_hours))}}</div>
+                    <div>Cumulative sum  : {{s.cumulative_sum-s.cumulative_sum-s.cumulative_pass_fail_sum}}</div>
+                    <div>Cumulative hours : {{s.cumulative_hours-s.cumulative_hours-s.cumulative_pass_fail_hours}}</div>
+                </div>
+                
+
+            </div>
+        </div>
+    </div>
+</div>
+{% endfor %}
+{% endblock %}
+
+{% block with_pass_fail %}
+[{% for i in Semester.with_pass_fail() %}{{i}},{% endfor %}]
+{% endblock %}
+
+{% block without_pass_fail %}
+[{% for i in Semester.without_pass_fail() %}{{i}},{% endfor %}]
+{% endblock %}
+
+{% block semesters_names %}
+[{% for i in Semester.semesters_names() %}"{{i}}",{% endfor %}]
+{% endblock %}
+
+

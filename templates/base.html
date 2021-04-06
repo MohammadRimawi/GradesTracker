@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
+    </script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"
+        integrity="sha512-hZf9Qhp3rlDJBvAKvmiG+goaaKRZA6LKUO35oK6EsM0/kjPK32Yw7URqrq3Q+Nvbbt8Usss+IekL7CRn83dYmw=="
+        crossorigin="anonymous"></script>
+    
+    
+    
+    
+    <style>
+        body {
+            overflow-y: overlay !important;
+            min-width: 1000px;
+        }
+        body.bg-dark, body.bg-dark .accordion-button,body.bg-dark tr:nth-child(n){
+            color: white;
+        }
+        body.bg-dark .accordion-button:not(.collapsed){
+            color: black;
+        }
+        body.bg-dark .accordion-button.collapsed{
+            border-color: ghostwhite;
+        }
+        #main {
+            width: 80%;
+            margin: auto;
+        }
+
+        .table {
+            border-color: white !important;
+            margin: 0 !important;
+            border-width: 0 !important;
+            font-weight: 200 !important;
+        }
+
+        .PassFail {
+            background: lightslategrey;
+        }
+
+        .accordion-body {
+            padding: 5px;
+            /* box-shadow: 0px 5px 7px -1px rgba(0,0,0,0.45) inset; */
+
+        }
+
+        body,
+        .accordion-button {
+            font-size: 14px !important;
+
+
+        }
+
+        .accordion-header span {
+            z-index: 99;
+            top: 20%;
+
+        }
+
+        .accordion-button:not(.collapsed) {
+            /* transform: scale(1.1); */
+            box-shadow: -1px 5px 10px -5px rgba(0, 0, 0, 0.45);
+        }
+
+        .head {
+            padding: 10px 20px;
+            font-weight: 700;
+            /* font-size: 10px; */
+
+        }
+
+        .accordion-button:focus {
+            z-index: 3;
+            border-color: none;
+            outline: 0;
+            /* box-shadow: -1px 10px 10px -5px rgba(0,0,0,0.45); */
+        }
+
+        thead th {
+            font-weight: bold !important;
+
+        }
+
+        th {
+            font-weight: normal !important;
+
+        }
+
+        .form-check-input:checked {
+            background-color: red;
+        }
+
+        .m-auto {
+            text-align: center;
+        }
+    </style>
+
+
+
+    <link id='GoogleFontsLink' href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'
+        type='text/css'>
+    <script>
+        WebFontConfig = {
+            google: {
+                families: ["Open Sans", ]
+            },
+            active: function () {
+                DrawTheChart(ChartData, ChartOptions, "chart-01", "line")
+            }
+        };
+    </script>
+    <script asyn src="js/webfont.js">
+    </script>
+    <script src="js/Chart.min.js"></script>
+    <script>
+        function DrawTheChart(ChartData, ChartOptions, ChartId, ChartType) {
+        {% if dark_mode %}
+            Chart.plugins.register({
+                beforeDraw: function(chartInstance) {
+                    var ctx = chartInstance.chart.ctx;
+                    ctx.fillStyle = '#1c2025';
+                    ctx.fillRect(0, 0, chartInstance.chart.width, chartInstance.chart.height);
+                }
+            })
+        {% endif %}
+            eval('var myLine = new Chart(document.getElementById(ChartId).getContext("2d"),{type:"' + ChartType +
+                '",data:ChartData,options:ChartOptions});document.getElementById(ChartId).getContext("2d").stroke();'
+            )
+        }
+    </script>
+
+</head>
+
+<body class="{% if dark_mode %}bg-dark{% endif %}">
+
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Pricing</a>
+                    </li>
+                </ul>
+                <span class="navbar-text">
+                    Navbar text with an inline element
+                </span>
+            </div>
+        </div>
+    </nav>
+
+    <div id="main">
+        <form action="{{ url_for('handle_data') }}" method="post">
+            <textarea name="projectFilepath" id="" cols="300" rows="10"></textarea>
+            <input type="submit">
+
+        </form>
+        <div class="accordion" id="accordionExample">
+            <div class="row w-100 head">
+                <div class="col-2 m-auto">Semester</div>
+                <div class="col-2 m-auto">Semester Average</div>
+                <div class="col-2 m-auto">Cumulative Average with pass/fail</div>
+                <div class="col-2 m-auto">Performance</div>
+                <div class="col-2 m-auto">Total hours</div>
+                <div class="col-2 m-auto">Number of courses</div>
+            </div>
+            {% block button %}
+
+            {% endblock %}
+           
+
+        </div>
+
+
+        <canvas id="chart-01"
+            style="background-color:rgba(255,255,255,1.00);border-radius:0px;width:100%;height:500px;padding-left:0px;padding-right:0px;padding-top:0px;padding-bottom:0px">
+        </canvas>
+        <script>
+            function MoreChartOptions() {}
+            var ChartData = {
+                labels: {% block semesters_names %} {% endblock %},
+                datasets: [{
+                        data:  {% block without_pass_fail %} {% endblock %},
+                        borderColor: 'rgba(72,0,255,0.98)',
+                        {% if dark_mode %}
+                        backgroundColor: '#1c2025',
+                        pointBackgroundColor: 'rgba(72,0,255,0.98)',
+                        pointBorderColor: '#1c2025',
+                        {% else %}
+                        backgroundColor: 'rgba(255,255,255,1)',
+                        pointBackgroundColor: '#4800ff',
+                        pointBorderColor: '#fff',
+                        {% endif %}
+                        label: "Without Pass/Fail"
+                    },
+
+                    {
+                        data: {% block with_pass_fail %} {% endblock %},
+                        borderColor: '#ff006f',
+                        {% if dark_mode %}
+                        backgroundColor: 'rgba(255,0,0,.1)',
+                        pointBackgroundColor: '#ff006f',
+                        pointBorderColor: '#1c2025',
+                        {% else %}
+                        backgroundColor: 'rgba(255,0,0,.1)',
+                        pointBackgroundColor: '#ff006f',
+                        pointBorderColor: '#fff',
+                        
+                        {% endif %}
+                        label: "With Pass/Fail"
+                    },
+
+                ]
+            };
+
+            ChartOptions = {
+                responsive: false,
+                layout: {
+                    padding: {
+                        top: 12,
+                        left: 12,
+                        bottom: 12,
+                    },
+                },
+                scales: {
+                    xAxes: [{
+                        gridLines: {
+                            borderDash: [],
+                        },
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Semesters',
+                            fontColor: '#666666',
+                            fontSize: 16,
+                        },
+
+                    }],
+
+                    yAxes: [{
+                        gridLines: {
+                            borderDash: [],
+                        },
+                        scaleLabel: {
+                            display: false,
+                            labelString: 'Grade',
+                            fontColor: '#666666',
+                            fontSize: 16,
+                        },
+
+                    }],
+                },
+                plugins: {
+                    datalabels: {
+                        display: true,
+                        color: '#757575',
+                        anchor: 'start',
+                        align: 'start',
+                        offset: 0,
+                        font: {
+                            style: ' bold',
+                        },
+                    },
+                },
+                legend: {
+                    labels: {
+                        usePointStyle: true,
+
+                        generateLabels: function (chart) {
+                            return chart.data.datasets.map(function (dataset, i) {
+                                return {
+                                    text: dataset.label,
+                                    lineCap: dataset.borderCapStyle,
+                                    lineDash: [],
+                                    lineDashOffset: 0,
+                                    lineJoin: dataset.borderJoinStyle,
+                                    pointStyle: 'rectRounded',
+                                    fillStyle: dataset.backgroundColor,
+                                    strokeStyle: dataset.borderColor,
+                                    lineWidth: dataset.pointBorderWidth,
+                                    lineDash: dataset.borderDash,
+                                }
+                            })
+                        },
+
+                    },
+                },
+                elements: {
+                    arc: {},
+                    point: {
+                        radius: 4,
+                        borderWidth: 4,
+                    },
+                    line: {
+                        tension: 0,
+                        borderWidth: 2,
+                    },
+                    rectangle: {},
+                },
+                tooltips: {
+                    displayColors: false,
+                },
+                hover: {
+                    mode: 'nearest',
+                    animationDuration: 400,
+                },
+            };
+            DrawTheChart(ChartData, ChartOptions, "chart-01", "line");
+            
+
+
+        </script>
+</body>
+
+</html>

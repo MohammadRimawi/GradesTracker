@@ -1,0 +1,9 @@
+Course Number	Course Title	Number of hours	Course Status	Prerequisite	Course Average	Course Result
+11100	Computer Skills (Remedial)	0	Exempted			Pass
+31019	Arabic Language(Remedial)	0	Exempted			Pass
+31029	English Language (Remedial)	0	Exempted			Pass
+31111	Arabic Language	3	Registered	Prerequisite: Arabic Language(Remedial)	84	Pass
+31121	English Language	3	Registered	Prerequisite: English Language (Remedial)	88	Pass
+31151	National Education	3	Registered		78	Pass
+31153	Introduction to Society, Technology and Environment Protection	0	Registered			Pass
+31251	Military Science	3			

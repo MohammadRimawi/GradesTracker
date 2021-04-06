@@ -1,0 +1,272 @@
+{
+    'courses\\Compulsory Program Requirements.tsv': [
+        {
+        "Course Number": "11206",
+        "Course Title": "Object Oriented Programming",
+        "Number of hours": "3",
+        "Course Status": "Registered",
+        "Prerequisite": "Prerequisite: Structured Programming",
+        "Course Average": "80",
+        "Course Result": "Pass"
+    }, {
+        "Course Number": "11212",
+        "Course Title": "Data Structures and Introduction to Algorithms",
+        "Number of hours": "3",
+        "Course Status": "Registered",
+        "Prerequisite": "Prerequisite: Discrete Mathematics (1),Prerequisite: Object Oriented Programming",
+        "Course Average": "82",
+        "Course Result": "Pass"
+    }, {
+        "Course Number": "11253",
+        "Course Title": "Object Oriented Programming Lab",
+        "Number of hours": "1",
+        "Course Status": "Registered",
+        "Prerequisite": "Concurrent: Object Oriented Programming",
+        "Course Average": "97",
+        "Course Result": "Pass"
+    }, {
+        "Course Number": "11313",
+        "Course Title": "Algorithms Design and Analysis",
+        "Number of hours": "3",
+        "Course Status": "Registered",
+        "Prerequisite": "Prerequisite: Data Structures 
+        and Introduction to Algorithms ", "
+        Course Average ": "
+        90 ", "
+        Course Result ": "
+        Pass "}, {"
+        Course Number ": "
+        11316 ", "
+        Course Title ": "
+        Theory of Computation ", "
+        Number of hours ": "
+        3 ", "
+        Course Status ": "
+        Registered ", "
+        Prerequisite ": "
+        Prerequisite: Discrete Math(2),
+        Prerequisite: Object Oriented Programming ", "
+        Course Average ": "
+        ", "
+        Course Result ": "
+        Pass "}, {"
+        Course Number ": "
+        11323 ", "
+        Course Title ": "
+        Database Systems ", "
+        Number of hours ": "
+        3 ", "
+        Course Status ": "
+        Registered ", "
+        Prerequisite ": "
+        Prerequisite: Data Structures and Introduction to Algorithms ", "
+        Course Average ": "
+        ", "
+        Course Result ": "
+        Pass "}, {"
+        Course Number ": "
+        11335 ", "
+        Course Title ": "
+        Operating Systems ", "
+        Number of hours ": "
+        3 ", "
+        Course Status ": "
+        Registered ", "
+        Prerequisite ": "
+        Prerequisite: Data Structures and Introduction to Algorithms,
+        Prerequisite: Computer Organization and Assembly Language ", "
+        Course Average ": "
+        80 ", "
+        Course Result ": "
+        Pass "}, {"
+        Course Number ": "
+        11354 ", "
+        Course Title ": "
+        Database Systems Lab ", "
+        Number of hours ": "
+        1 ", "
+        Course Status ": "
+        Registered ", "
+        Prerequisite ": "
+        Concurrent: Database Systems ", "
+        Course Average ": "
+        93 ", "
+        Course Result ": "
+        Pass "}, {"
+        Course Number ": "
+        11355 ", "
+        Course Title ": "
+        Operating Systems Lab ", "
+        Number of hours ": "
+        1 ", "
+        Course Status ": "
+        Registered ", "
+        Prerequisite ": "
+        Concurrent: Operating Systems ", "
+        Course Average ": "
+        96 ", "
+        Course Result ": "
+        Pass "}, {"
+        Course Number ": "
+        11391 ", "
+        Course Title ": "
+        Practical Training ", 
+        "Number of hours": "3",
+        "Course Status": "",
+        "Prerequisite": "Finish 90 Hours",
+        "Course Average": "",
+        "Course Result": ""
+    }, {
+        "Course Number": "11425",
+        "Course Title": "Software Engineering",
+        "Number of hours": "3",
+        "Course Status": "Registered",
+        "Prerequisite": "Prerequisite: Database Systems",
+        "Course Average": "84",
+        "Course Result": "Pass"
+    }, {
+        "Course Number": "11428",
+        "Course Title": "Artificial Intelligence",
+        "Number of hours": "3",
+        "Course Status": "Registered",
+        "Prerequisite": "Prerequisite: Data Structures and Introduction to Algorithms",
+        "Course Average": "",
+        "Course Result": "Not Confirmed"
+    }, {
+        "Course Number": "11435",
+        "Course Title": "Data Communications & Computer Networks",
+        "Number of hours": "3",
+        "Course Status": "Registered",
+        "Prerequisite": "Prerequisite: Data Structures and Introduction to Algorithms",
+        "Course Average": "78",
+        "Course Result": "Pass"
+    }, {
+        "Course Number": "11449",
+        "Course Title": "Computer and Society",
+        "Number of hours": "1",
+        "Course Status": "Registered",
+        "Prerequisite": "Finish 70 Hours",
+        "Course Average": "",
+        "Course Result": "Not Confirmed"
+    }, {
+        "Course Number": "11464",
+        "Course Title": "Information Systems Security",
+        "Number of hours": "3",
+        "Course Status": "Registered",
+        "Prerequisite": "Prerequisite: Data Communications & Computer Networks",
+        "Course Average": "",
+        "Course Result": "Not Confirmed"
+    }, {
+        "Course Number": "11493",
+        "Course Title": "Graduation Project 1",
+        "Number of hours": "1",
+        "Course Status": "",
+        "Prerequisite": "Finish 90 Hours",
+        "Course Average": "",
+        "Course Result": ""
+    }, {
+        "Course Number": "11494",
+        "Course Title": "Graduation Project 2",
+        "Number of hours": "2",
+        "Course Status": "",
+        "Prerequisite": "Prerequisite: Graduation Project 1",
+        "Course Average": "",
+        "Course Result": ""
+    }, {
+        "Course Number": "12242",
+        "Course Title": "Webpage Design and Internet programming LAB",
+        "Number of hours": "1",
+        "Course Status": "Registered",
+        "Prerequisite": "Concurrent: Webpage Design and Internet programming",
+        "Course Average": "99",
+        "Course Result": "Pass"
+    }, {
+        "Course Number": "12243",
+        "Course Title": "Webpage Design and Internet programming",
+        "Number of hours": "3",
+        "Course Status": "Registered",
+        "Prerequisite": "Prerequisite: Object Oriented Programming",
+        "Course Average": "92",
+        "Course Result": "Pass"
+    }, {
+        "Course Number": "12343",
+        "Course Title": "Visual Programming",
+        "Number of hours": "3",
+        "Course Status": "Registered",
+        "Prerequisite": "Prerequisite: Object Oriented Programming",
+        "Course Average": "96",
+        "Course Result": "Pass"
+    }, {
+        "Course Number": "20135",
+        "Course Title": "Discrete Math (2)",
+        "Number of hours": "3",
+        "Course Status": "Registered",
+        "Prerequisite": "Prerequisite: Discrete Mathematics (1)",
+        "Course Average": "84",
+        "Course Result": "Pass"
+    }, {
+        "Course Number": "20141",
+        "Course Title": "Physics (1)",
+        "Number of hours": "3",
+        "Course Status": "Registered",
+        "Prerequisite": "",
+        "Course Average": "76",
+        "Course Result": "Pass"
+    }, {
+        "Course Number": "20142",
+        "Course Title": "Physics (2)",
+        "Number of hours": "3",
+        "Course Status": "",
+        "Prerequisite": "Prerequisite: Physics (1)",
+        "Course Average": "",
+        "Course Result": ""
+    }, {
+        "Course Number": "20147",
+        "Course Title": "Physics Lab",
+        "Number of hours": "0",
+        "Course Status": "Registered",
+        "Prerequisite": "Concurrent: Physics (1)",
+        "Course Average": "",
+        "Course Result": "Pass"
+    }, {
+        "Course Number": "20333",
+        "Course Title": "Numerical Analysis",
+        "Number of hours": "3",
+        "Course Status": "Registered",
+        "Prerequisite": "Prerequisite: Calculus (2)",
+        "Course Average": "",
+        "Course Result": "Not Confirmed"
+    }, {
+        "Course Number": "20336",
+        "Course Title": "Principles of Probability",
+        "Number of hours": "3",
+        "Course Status": "Registered",
+        "Prerequisite": "Prerequisite: Calculus (2),Prerequisite: Statistical Methods",
+        "Course Average": "",
+        "Course Result": "Pass"
+    }, {
+        "Course Number": "22241",
+        "Course Title": "Digital Logic Design",
+        "Number of hours": "3",
+        "Course Status": "Registered",
+        "Prerequisite": "",
+        "Course Average": "84",
+        "Course Result": "Pass"
+    }, {
+        "Course Number": "22342",
+        "Course Title": "Computer Organization and Assembly Language",
+        "Number of hours": "3",
+        "Course Status": "Registered",
+        "Prerequisite": "Prerequisite: Digital Logic Design",
+        "Course Average": "71",
+        "Course Result": "Pass"
+    }, {
+        "Course Number": "22541",
+        "Course Title": "Computer Architecture",
+        "Number of hours": "3",
+        "Course Status": "",
+        "Prerequisite": "Prerequisite: Computer Organization and Assembly Language",
+        "Course Average": "",
+        "Course Result": ""
+    }]
+}
