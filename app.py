@@ -143,7 +143,7 @@ class Semester:
         cumulative_pass_fail_sum=0
         cumulative_sum=0
         cumulative_hours=0
-        for path in pathlib.Path("semesters").iterdir():
+        for path in sorted(pathlib.Path("semesters").iterdir()):
         
             prev=0
             try:
@@ -154,8 +154,8 @@ class Semester:
             if path.is_file():
                 current_file = open(path, "r")
                 header = current_file.readline().strip().split('\t')
-                # print(header)
-                file_name =current_file.name.split('\\')[1].split('.tsv')[0]
+                print(header)
+                file_name =current_file.name.split('/')[1].split('.tsv')[0]
                 s = Semester()
                 s.year=int(file_name[1])
                 s.semester=int(file_name[3])
@@ -246,7 +246,7 @@ class Semester:
     @staticmethod
     def print_semesters():
         for s in Semester.semesters:
-            print("Y"+str(s.year)+"S"+str(s.semester))
+            print("Y"+str(s.year)+"zS"+str(s.semester))
             for c in s.courses:
                  pprint(c.__dict__, indent=4, width=200, sort_dicts=False)
             print("***************************************************")
@@ -370,8 +370,8 @@ def handle_data():
 if __name__=="__main__":
     # print("hello")
     Semester.load_semesters()
-    # Course.change_pass_fail("31111")
     # Semester.update_semesters()
+    # Course.change_pass_fail("31111")
     # print(calculate_average(80.6,16))
     app.run(host='0.0.0.0',debug=True)
     # Semester.print_semesters()
