@@ -145,38 +145,9 @@
 <body class="{% if dark_mode %}bg-dark{% endif %}">
 
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
-                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarText">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Features</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Pricing</a>
-                    </li>
-                </ul>
-                <span class="navbar-text">
-                    Navbar text with an inline element
-                </span>
-            </div>
-        </div>
-    </nav>
-
+  
     <div id="main">
-        <form action="{{ url_for('handle_data') }}" method="post">
-            <textarea name="projectFilepath" id="" cols="300" rows="10"></textarea>
-            <input type="submit">
-
-        </form>
+       <br><br><br>
         <div class="accordion" id="accordionExample">
             <div class="row w-100 head">
                 <div class="col-2 m-auto">Semester</div>
@@ -331,6 +302,7 @@
 
 
         </script>
+        <br><br><br>
 </body>
 
 </html>
